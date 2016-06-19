@@ -11,16 +11,22 @@ angular
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
     $stateProvider
+	
       .state('add-review', {
         url: '/add-review',
         templateUrl: 'views/review-form.html',
-        controller: 'AddReviewController',
+        controller: 'examCtrl',
         authenticate: true
       })
       .state('all-reviews', {
         url: '/all-reviews',
         templateUrl: 'views/all-reviews.html',
-        controller: 'AllReviewsController'
+        controller: 'MainCtrl'
+      })
+	   .state('contact', {
+        url: '/contactus',
+        templateUrl: 'views/contact.html',
+        controller: 'ContactusCtrl'
       })
       .state('edit-review', {
         url: '/edit-review/:id',
@@ -49,13 +55,18 @@ angular
       .state('my-reviews', {
         url: '/my-reviews',
         templateUrl: 'views/my-reviews.html',
-        controller: 'MyReviewsController',
+        controller: 'examCtrl',
         authenticate: true
       })
       .state('sign-up', {
         url: '/sign-up',
         templateUrl: 'views/sign-up-form.html',
         controller: 'SignUpController',
+      })
+	  .state('info-exam', {
+        url: '/info-exam',
+        templateUrl: 'views/info-exam.html',
+		controller: 'examCtrl',
       })
       .state('sign-up-success', {
         url: '/sign-up/success',

@@ -31,12 +31,7 @@ fieldset legend {
   border:1px solid #777;
   padding:0 .5rem;
 }
-label {
-  display:inline-block;
-  text-align:right;
-  vertical-align:middle;
-  width:200px;
-}
+
 select {
   background:#ddd;
   text-indent: 0.01px;
@@ -94,7 +89,6 @@ textarea {
   background:#ddd;
   border:0;
   display:inline-block;
-  font-family:'courier new';
   margin-bottom:1rem;
   padding:.5rem;
   vertical-align:middle;

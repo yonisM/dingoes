@@ -2,15 +2,49 @@
   "name": "Reviewer",
   "base": "User",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {},
   "validations": [],
   "relations": {
-    "reviews": {
+    "studentMarks": {
       "type": "hasMany",
-      "model": "Review",
-      "foreignKey": "publisherId"
+      "model": "studentMark",
+      "foreignKey": ""
     }
   },
-  "acls": [],
-  "methods": []
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
 }

@@ -1,9 +1,1 @@
-<section>
-  <article ng-repeat="r in reviews.slice().reverse()">
-    <header>
-      <h1>{{r.date | date}} | {{r.coffeeShop.name}}</h1>
-      <h2>{{r.reviewer.email}}</h2>
-    </header>
-    <p>{{r.rating}}&#9733; - {{r.comments}}</p>
-  </article>
-</section>
+<div class="container"> <div class="jumbotron" style="background-color:white"> <h2>Dingoes Academy</h2> <!--	<img src="http://i.telegraph.co.uk/multimedia/archive/02204/school_2204304b.jpg" class = "img-responsive"> --> </div> <div class="col-xs-12"> <div class="panel-group"> <div class="panel panel-info"> <div class="panel panel-heading"> A Word From Our Head Teacher </div> <div class="panel panel-body"> <p>Welcome, and thank you for taking the time to find out about our school.&nbsp;We pride ourselves on being a friendly and open school that offers a high quality education for all our children.&nbsp;</p> <p>At Dingoes Academy the children develop essential skills in literacy, numeracy and ICT and are able to work independently and through participation with others. There is an emphasis on using the rich range of resources available to us in the local area and beyond, as we believe that this helps to develop lively and enquiring minds and teaches children important life skills.&nbsp;</p> <p>We hope you find this website useful; it aims to give you an insight into our school community.&nbsp; If you wish to find out more you are very welcome to visit.&nbsp; We offer tours throughout the year, which you can book through the school office.</p> <p>With Regards, </p> <p> {{headTeacher.fullName}} </p> </div> </div> </div> </div> <!-- Our Faculty --> <div class="col-xs-12"> <div class="panel-group"> <div class="panel panel-info"> <div class="panel panel-heading"> Our Faculty </div> <div class="panel panel-body"> <ul class="media-list" ng-repeat="x in faculty"> <li class="media"> <div class="media-left"> <img class="media-object" src="{{x.image}}" width="64px" height="64px"> </div> <div class="media-body"> <h4 class="media-heading">{{x.fullName}} <small> {{x.Faculty}} </small> </h4> <p> {{x.comment}} </p> </div> </li> </ul> </div> </div> </div> </div> </div>

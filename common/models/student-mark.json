@@ -1,0 +1,31 @@
+{
+  "name": "studentMark",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "results": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "Reviewer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

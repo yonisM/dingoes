@@ -1,0 +1,27 @@
+{
+  "name": "about",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fullName": {
+      "type": "string"
+    },
+    "Faculty": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

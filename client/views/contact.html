@@ -1,0 +1,76 @@
+<div class = "container">
+    <div class = "col-xs-12">
+        
+		
+		<form role= "form" name ="contactusForm"  ng-submit = "sendMessage()" ng-show= "contactForm"  novalidate>
+             <div class = "col-xs-offset-3">
+			<h3 style = "font-weight:bold;" >Contact Us</h3>
+			</div> 
+			 
+			 
+			 
+        <div>
+            <p>If there is any information you feel is missing on our app or website, or if there is something you would like to share with us. You can get in touch with us directly by simply filling out the form below.</p>
+        </div>
+			
+           
+			
+			<div class="form-group">
+			<label for="name">Full Name:</label>
+			<input type="text" class="form-control" id = "name" placeholder="Full Name" name ="fullName"	 ng-model= "contactus.fullName" ng-minlength="4" required>
+			</div>
+			
+			
+			
+			<div class="form-group" >
+			<label for="usr">Email:</label>
+			<input type="email" class="form-control" placeholder = "Email" name = "email"  ng-model = "contactus.email = currentUser.email " required>  
+			</div>
+			
+			
+			
+			<div class "form-group">
+			<label> Message </label>
+			 <textarea name="message" class="form-control"   ng-model = "contactus.message"  required> </textarea>
+			</div>
+          
+           
+        
+			
+			<div class="padding">
+			
+            <p ng-show="contactusForm.fullName.$error.required && contactusForm.fullName.$dirty" style="color:maroon;">* Your Full Name is required</p>
+            <p ng-show="contactusForm.fullName.$error.minlength" style="color:maroon;">* Your Full Name must be longer than 4 characters</p>
+			<p ng-show = "contactusForm.email.$error.required && contactusForm.email.$dirty" style="color:maroon;">  * Your Email Address is required </p> 
+           <p ng-show ="contactusForm.email.$invalid && contactusForm.email.$dirty" style ="color:maroon;"> *Your Email Address must be in correct format </p> 
+			<p ng-show= "contactusForm.message.$error.required && contactusForm.message.$dirty"  style ="color:maroon;"> *Enter your Message </p> 
+		   
+		
+		   </div>
+			
+	
+			
+			
+		
+  
+		   <br> <button type ="submit" class="btn btn-success btn-block" ng-disabled = "contactusForm.$invalid" >Send Message</button>
+			
+			
+
+		</form>
+		
+		
+	<div ng-show = "tyMessage">
+	
+		<p> Thank you very much <strong> {{contactus.fullName}} </strong> for sending us a message. We will reply to your email <strong> {{contactus.email}} </strong> as soon as possible </p>
+		<p> You will be redirected to the homepage in 3 seconds    </p>
+	</div>
+		
+		
+		
+		
+		
+		
+		
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "nonMultipleChoice",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "questionNumber": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "userResponse": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "evaluation": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

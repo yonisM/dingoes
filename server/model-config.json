@@ -36,6 +36,38 @@
   },
   "Reviewer": {
     "dataSource": "mongoDs",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "contact": {
+    "dataSource": "mongoDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "nonMultipleChoice": {
+    "dataSource": "mongoDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "MultipleChoice": {
+    "dataSource": "mongoDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "about": {
+    "dataSource": "mongoDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "studentMark": {
+    "dataSource": "mongoDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

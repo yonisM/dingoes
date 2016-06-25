@@ -12,15 +12,15 @@ angular
       $urlRouterProvider) {
     $stateProvider
 	
-      .state('add-review', {
-        url: '/add-review',
-        templateUrl: 'views/review-form.html',
+      .state('mock', {
+        url: '/mock',
+        templateUrl: 'views/mock.html',
         controller: 'examCtrl',
         authenticate: true
       })
-      .state('all-reviews', {
-        url: '/all-reviews',
-        templateUrl: 'views/all-reviews.html',
+      .state('/', {
+        url: '/',
+        templateUrl: 'views/homepage.html',
         controller: 'MainCtrl'
       })
 	   .state('contact', {
@@ -28,12 +28,7 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactusCtrl'
       })
-      .state('edit-review', {
-        url: '/edit-review/:id',
-        templateUrl: 'views/review-form.html',
-        controller: 'EditReviewController',
-        authenticate: true
-      })
+     
       .state('delete-review', {
         url: '/delete-review/:id',
         controller: 'DeleteReviewController',
@@ -52,10 +47,10 @@ angular
         url: '/logout',
         controller: 'AuthLogoutController'
       })
-      .state('my-reviews', {
-        url: '/my-reviews',
-        templateUrl: 'views/my-reviews.html',
-        controller: 'examCtrl',
+      .state('my-results', {
+        url: '/my-results',
+        templateUrl: 'views/my-results.html',
+        controller: 'ExamResultsCtrl',
         authenticate: true
       })
       .state('sign-up', {
@@ -72,7 +67,7 @@ angular
         url: '/sign-up/success',
         templateUrl: 'views/sign-up-success.html'
       });
-    $urlRouterProvider.otherwise('all-reviews');
+    $urlRouterProvider.otherwise('/');
   }])
   .run(['$rootScope', '$state', function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(event, next) {

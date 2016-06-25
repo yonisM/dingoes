@@ -27,7 +27,7 @@
     "public": false
   },
   "CoffeeShop": {
-    "dataSource": "mysqlDs",
+    "dataSource": null,
     "public": true
   },
   "Review": {

@@ -8,14 +8,14 @@ angular
   .controller('AuthLoginController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     $scope.user = {
-      email: 'foo@bar.com',
-      password: 'foobar'
+      email: 'baz@qux.com',
+      password: 'bazqux'
     };
 
     $scope.login = function() {
       AuthService.login($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.go('add-review');
+          $state.go('/');
         });
     };
   }])
@@ -23,14 +23,14 @@ angular
       function($scope, AuthService, $state) {
     AuthService.logout()
       .then(function() {
-        $state.go('all-reviews');
+        $state.go('/');
       });
   }])
   .controller('SignUpController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     $scope.user = {
-      email: 'baz@qux.com',
-      password: 'bazqux'
+      email: 'Sam@live.com',
+      password: 'watchmen'
     };
 
     $scope.register = function() {

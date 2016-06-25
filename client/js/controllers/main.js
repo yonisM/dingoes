@@ -23,6 +23,24 @@
 	 }
 	 ])
 	 
+	 
+	 
+.controller('ExamResultsCtrl',['$scope','StudentMark','Reviewer','$rootScope','NonMultipleChoice','MultipleChoice',function($scope,StudentMark,Reviewer,$rootScope,NonMultipleChoice,MultipleChoice){
+	
+	 //return results 
+$scope.counterResults = Reviewer.studentMarks.count({id:$rootScope.currentUser.id});
+$scope.studentMarks = Reviewer.studentMarks({id:$rootScope.currentUser.id});
+
+
+ $scope.nonMultipleChoice = NonMultipleChoice.find(); 
+   $scope.multipleChoice = MultipleChoice.find();
+	
+}
+
+
+
+])	 
+	 
 
 .controller('examCtrl',['$scope','NonMultipleChoice', 'MultipleChoice','StudentMark','Reviewer','AuthService','$rootScope'
 ,function ($scope,NonMultipleChoice,MultipleChoice,StudentMark,Reviewer,AuthService,$rootScope) {
@@ -38,15 +56,12 @@
   var countIncorrect = 0;
   
 
-  
-
 	//return questions
    $scope.nonMultipleChoice = NonMultipleChoice.find(); 
    $scope.multipleChoice = MultipleChoice.find(); 
-   //return results 
-$scope.counterResults = Reviewer.studentMarks.count({id:$rootScope.currentUser.id});
-	
-	 $scope.studentMarks = Reviewer.studentMarks({id:$rootScope.currentUser.id});
+   
+   
+  
 	 
 	 
 	 
